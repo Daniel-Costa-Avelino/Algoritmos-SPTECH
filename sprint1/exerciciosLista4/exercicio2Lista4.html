@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2 lista 4</title>
+</head>
+
+<body>
+    <h1>Latas de refri</h1>
+
+    Insira quantas latinhas de refri toma:
+    <input type="text" id="input_qtdLatinhas"><br>
+    <button onclick="calcularLatasAno()">Quantos refris?</button>
+    <div id="div_mensagemLatasAno"></div>
+</body>
+
+</html>
+
+<script>
+    function calcularLatasAno() {
+        var latasDia = Number(input_qtdLatinhas.value);
+        var qtdLatasAno = latasDia * 365;
+
+        if (qtdLatasAno < 500) {
+            div_mensagemLatasAno.innerHTML = `
+            Você consome ${qtdLatasAno} garrafas de refrigerante por ano
+            `
+        }
+
+        if (qtdLatasAno > 500) {
+            div_mensagemLatasAno.innerHTML = `
+            Você consome ${qtdLatasAno} garrafas de refrigerante por ano, 
+            cuidado com a diabetes!
+            `
+        }
+    }
+</script>

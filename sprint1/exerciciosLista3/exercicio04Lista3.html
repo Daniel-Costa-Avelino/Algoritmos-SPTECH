@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04 da lista 3</title>
+</head>
+<body>
+    <h1>Exercício 04</h1>
+
+    Insira o nome do guerreiro:
+    <input id="input_nomeGuerreiro" type="text">
+    <br><br>
+
+    Insira o KI normal do guerreiro:
+    <input id="input_valorKiNormal" type="text">
+    <br><br>
+
+    <button onclick="verKiEmCadaForma()">Ver ki em cada forma</button>
+
+</body>
+</html>
+
+<script>
+
+    function verKiEmCadaForma() {
+        var nomeGuerreiro = input_nomeGuerreiro.value;
+        var kiFormaNormal = input_valorKiNormal.value;
+        var kiFormaSayajin = Number(kiFormaNormal) * 50;
+        var kiFormaSayajin2 = Number(kiFormaNormal) * 100;
+
+        alert("O guerreiro " + nomeGuerreiro + " no modo Super Sayajin tem " + kiFormaSayajin + " de KI");
+        alert("O guerreiro " + nomeGuerreiro + " no modo Super Sayajin 2 tem " + kiFormaSayajin2 + " de KI");
+    }
+
+</script>

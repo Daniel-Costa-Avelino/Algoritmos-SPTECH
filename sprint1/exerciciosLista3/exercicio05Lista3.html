@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05 da lista 3</title>
+</head>
+
+<body>
+
+    <h1>Exercício 5</h1>
+
+    Insira a nota da continuada:
+    <input id="input_notaContinuada" type="text"><br><br>
+
+    Insira a nota do semestre:
+    <input id="input_notaSemestre" type="text"><br><br>
+
+    Insira seu nome:
+    <input id="input_nomeAluno" type="text"><br><br>
+
+    <button onclick="verMedia()">Ver média</button>
+</body>
+
+</html>
+
+<script>
+
+    function verMedia() {
+        var notaContinuada = input_notaContinuada.value;
+        var notaSemestre = input_notaSemestre.value;
+        var nome = input_nomeAluno.value;
+        var media = (Number(notaContinuada) * 0.40) + (Number(notaSemestre) * 0.60);
+
+        alert("A média de " + nome + " será de " + media);
+    }
+
+</script>

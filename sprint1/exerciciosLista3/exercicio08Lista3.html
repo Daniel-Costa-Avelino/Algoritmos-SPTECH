@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08 lista 3</title>
+</head>
+
+<body>
+
+    <h1>Depositar ou sacar?</h1>
+
+    <p>Digite o valor a ser depositado ou sacado</p>
+    <input type="text" id="input_valor">
+    <br><br>
+    <button onclick="depositar()">Depositar</button><br><br>
+    <button onclick="sacar()">Sacar</button>
+
+    <p id="saldoAtual">O saldo atual é :</p>
+
+</body>
+
+</html>
+
+<script>
+
+    var saldo = 0;
+
+    function depositar() {
+        var inputValor = input_valor.value;
+        saldo = saldo + Number(inputValor);
+        alert(`Depósito de R$${inputValor} efetuado! Saldo atual: R$${saldo}`);
+        saldoAtual.innerHTML = `O saldo atual é: ${saldo}`;
+    }
+
+    function sacar() {
+        var inputValor = input_valor.value;
+        saldo = saldo - Number(inputValor);
+        alert(`Retirada de R$${inputValor} efetuado! Saldo atual: R$${saldo}`);
+        saldoAtual.innerHTML = `O saldo atual é: ${saldo}`;
+    }
+
+</script>

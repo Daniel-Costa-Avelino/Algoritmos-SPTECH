@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13 lista 3</title>
+</head>
+
+<body>
+
+    <h1>Passagem</h1>
+
+    Insira o valor da passagem de ônibus:
+    <input type="text" id="input_passagemOnibus"><br>
+
+    Insira a quantidade de viagens no mês:
+    <input type="text" id="input_qtdViagensMes"><br>
+
+    Insira a distância do trabalho até em casa(em KM):
+    <input type="text" id="input_distancia"><br>
+
+    <button onclick="calculoVT()">Calcular VT</button>
+
+    <div id="div_mensagemTransporte"></div>
+
+</body>
+
+</html>
+
+<script>
+    function calculoVT() {
+        var valorPassagem = Number(input_passagemOnibus.value);
+        var qtdViagensMes = Number(input_qtdViagensMes.value);
+        var distancia = Number(input_distancia.value);
+        var qtdViagensOnibus = qtdViagensMes - (qtdViagensMes * 0.10);
+        var qtdViagensUber = qtdViagensMes * 0.10;
+        var valorOnibusMes = valorPassagem * qtdViagensOnibus;
+        var valorUberMes = (distancia * 0.75) * qtdViagensUber;
+        var valorTotalTransporte = valorUberMes + valorOnibusMes;
+
+        div_mensagemTransporte.innerHTML = `
+        Você vai gastar R$${valorTotalTransporte} por mês com transporte.  
+        `
+    }
+</script>

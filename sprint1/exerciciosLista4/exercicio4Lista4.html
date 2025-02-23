@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4 lista 4</title>
+</head>
+
+<body>
+    <h1>Pizza</h1>
+
+    Insira o preço da pizza:
+    <input type="text" id="input_precoPizza"><br>
+
+    Insira a quantidade de amigos reunidos:
+    <input type="text" id="input_qtdAmigos"><br>
+
+    <button onclick="valorPorAmigo()">Rola a pizza?</button>
+    <div id="div_mensagemPizza"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function valorPorAmigo() {
+        var valorPizza = Number(input_precoPizza.value);
+        var qtdAmigos = Number(input_qtdAmigos.value);
+        var valorPorAmigo = (valorPizza/ qtdAmigos);
+
+        if (valorPorAmigo < 20) {
+            div_mensagemPizza.innerHTML =
+            `Cada amigo vai pagar R$${valorPorAmigo} pela pizza`;
+        }
+
+        if (valorPorAmigo >= 20) {
+            div_mensagemPizza.innerHTML =
+            `Deu ruim! Pizza muito cara!`;
+        }
+    }
+</script>

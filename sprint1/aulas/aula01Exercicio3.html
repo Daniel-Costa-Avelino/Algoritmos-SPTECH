@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+</head>
+<body>
+    <h1>Futebol</h1>
+
+    <p>Insira o nome do time</p>
+    <input type="text" id="input_nomeTime">
+
+    <p>Insira a quantidade de titulos que seu time possui</p>
+    <input type="number" id="input_qtdTitulos"> <br><br>
+
+    <button onclick="exibirTime_titulos()">Amo meu time</button>
+</body>
+</html>
+
+<script>
+    function exibirTime_titulos() {
+        alert("O time " + input_nomeTime.value + " tem " + input_qtdTitulos.value + " títulos");
+    }
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14 Lista 3</title>
+</head>
+
+<body>
+    <h1>Dragon Ball</h1>
+
+    Insira o KI base do guerreiro:
+    <input type="text" id="input_kiBase"><br><br>
+
+    Transformar em... <br><br>
+
+    <button onclick="transformarSSJ()">SSJ</button>
+    <button onclick="transformarSSJ2()">SSJ2</button>
+    <button onclick="transformarSSJ3()">SSJ3</button>
+
+    <br><br>
+
+    <div id="div_mensagemKi"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function transformarSSJ() {
+        var valorKiBase = Number(input_kiBase.value);
+        var valorKiSSJ = valorKiBase * 50;
+        div_mensagemKi.innerHTML = `Após se transformar em SSJ, o ki desse Sayajin passa a ser de ${valorKiSSJ}`
+    }
+
+    function transformarSSJ2() {
+        var valorKiBase = Number(input_kiBase.value);
+        var valorKiSSJ2 = valorKiBase * 100;
+        div_mensagemKi.innerHTML = `Após se transformar em SSJ2, o ki desse Sayajin passa a ser de ${valorKiSSJ2}`
+    }
+
+    function transformarSSJ3() {
+        var valorKiBase = Number(input_kiBase.value);
+        var valorKiSSJ3 = valorKiBase * 200;
+        div_mensagemKi.innerHTML = `Após se transformar em SSJ3, o ki desse Sayajin passa a ser de ${valorKiSSJ3}`
+    }
+
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11 Lista 3</title>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    Insira um número para ver a Tabuada:
+    <input type="text" id="input_numTabuada"><br>
+    <button onclick="verTabuada()">Ver a tabuada</button>
+
+    <div id="div_tabuada"></div>
+</body>
+</html>
+
+<script>
+    function verTabuada() {
+        var numTabuada = Number(input_numTabuada.value);
+        div_tabuada.innerHTML = `
+        Tabuada do ${numTabuada}: <br>
+        ${numTabuada} x 1 = ${numTabuada * 1}<br>
+        ${numTabuada} x 2 = ${numTabuada * 2}<br>
+        ${numTabuada} x 3 = ${numTabuada * 3}<br>
+        ${numTabuada} x 4 = ${numTabuada * 4}<br>
+        ${numTabuada} x 5 = ${numTabuada * 5}<br>
+        ${numTabuada} x 6 = ${numTabuada * 6}<br>
+        ${numTabuada} x 7 = ${numTabuada * 7}<br>
+        ${numTabuada} x 8 = ${numTabuada * 8}<br>
+        ${numTabuada} x 9 = ${numTabuada * 9}<br>
+        ${numTabuada} x 10 = ${numTabuada * 10}`
+    }
+</script>

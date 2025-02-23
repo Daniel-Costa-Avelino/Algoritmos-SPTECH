@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10 lista 3</title>
+</head>
+
+<body>
+    <h1>Eleição</h1>
+
+    Insira a quantidade de votos que o Candidato A teve:
+    <input type="text" id="input_votosCandidatoA"><br>
+
+    Insira a quantidade de votos que o Candidato B teve:
+    <input type="text" id="input_votosCandidatoB"><br>
+
+    Insira a quantidade de votos brancos:
+    <input type="text" id="input_votosBrancos"><br>
+
+    Insira a quantidade de votos nulos:
+    <input type="text" id="input_votosNulos"><br>
+
+    <button onclick="resultadoEleicao()">Resultado da eleição</button><br>
+    <div id="div_mensagem"></div>
+
+</body>
+
+</html>
+
+<script>
+    function resultadoEleicao(params) {
+        var votosCandidatoA = Number(input_votosCandidatoA.value);
+        var votosCandidatoB = Number(input_votosCandidatoB.value);
+        var votosBrancos = Number(input_votosBrancos.value);
+        var votosNulos = Number(input_votosNulos.value);
+        var votosInvalidos = votosBrancos + votosNulos;
+        var totalDeVotos = votosInvalidos + votosCandidatoB + votosCandidatoA;
+        var percentualCandidatoA = (votosCandidatoA * 100) / totalDeVotos;
+        var percentualCandidatoB = (votosCandidatoB * 100) / totalDeVotos;
+        var percentualInvalidos = (votosInvalidos * 100) / totalDeVotos;
+
+        div_mensagem.innerHTML = `<br> Total de votos: ${totalDeVotos} <br> 
+    Candidato A: ${percentualCandidatoA}% (${votosCandidatoA}) <br>
+    Candidato B: ${percentualCandidatoB}% (${votosCandidatoB}) <br>
+    Inválidos: ${percentualInvalidos}% (${votosInvalidos})`
+    }
+
+</script>

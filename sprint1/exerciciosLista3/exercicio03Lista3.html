@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03 da lista 3</title>
+</head>
+<body>
+
+    <h1>Exercício 03</h1>
+    
+    Insira o valor da passagem:
+    <input id="input_valorPassagem" type="text"><br>
+
+    Insira quantas viagens fará no mês:
+    <input id="input_qtdViagens" type="text"><br><br>
+
+    <button onclick="verEconomia()">Ver economia</button>
+
+</body>
+</html>
+
+<script>
+
+    function verEconomia() {
+        var valorPassagem = input_valorPassagem.value;
+        var qtdViagens = input_qtdViagens.value;
+        var economiaPorMes = (Number(valorPassagem) * Number(qtdViagens)) / 2;
+
+        alert("Você economizará R$" + economiaPorMes + " por mês");
+    }
+
+</script>
