@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 13 lista 4</title>
+</head>
+<body>
+
+    Insira a primeira nota:
+    <input type="text" id="input_n1"><br><br>
+    Insira a segunda nota:
+    <input type="text" id="input_n2"><br><br>
+    <button onclick="verificarSituacao()">Verificar situação</button>
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+
+<script>
+    function verificarSituacao() {
+        var n1 =Number(input_n1.value);
+        var n2 =Number(input_n2.value);
+        var media = (n1 + n2) / 2;
+
+        if (media >= 6) {
+            alert("Parabéns, aprovado!")
+        } else {
+            alert("Tente outra vez...")
+        }
+    }
+</script>
+
+<!-- 
+13. Crie um programa o qual:
+
+a) Solicite 2 notas de um aluno
+
+b) Ao clicar em "Verificar situação", calcule sua média e...
+
+c) Caso a média seja a partir de 6, exiba um alert com "Parabéns, aprovado!"
+
+d) Caso a média seja menor que 6, exiba um alert com "Tente outra vez..." -->

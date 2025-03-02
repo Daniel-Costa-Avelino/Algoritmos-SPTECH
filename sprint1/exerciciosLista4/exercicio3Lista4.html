@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 3 lista 4</title>
 </head>
+
 <body>
-    
+
     <h1>Média</h1>
 
     Insira a primeira nota:
@@ -22,6 +24,7 @@
     <div id="div_mensagemDesempenho"></div>
 
 </body>
+
 </html>
 
 <script>
@@ -30,7 +33,7 @@
         var n1 = Number(input_n1.value);
         var n2 = Number(input_n2.value);
         var n3 = Number(input_n3.value);
-        var media = (n1+n2+n3) / 3;
+        var media = (n1 + n2 + n3) / 3;
 
         if (media <= 9.4) {
             div_mensagemDesempenho.innerHTML = `
@@ -45,3 +48,14 @@
         }
     }
 </script>
+
+<!-- 
+3. Paty é muito estudiosa e sua meta é sempre ser uma aluna fora de série. Na faculdade onde estuda, os "fora de série"
+são os alunos com média acima de 9,4. Portanto, para ajudá-la, crie um programa o qual:
+
+a) Pergunte o valor de 3 notas
+
+b) Ao clicar num botão "Analisar desempenho", calcule a média entre as notas e exiba na tela a frase "Sua média foi de
+X", onde X é a média calculada
+
+c) Somente caso a média for acima de 9,4 exibir também a frase "Parabéns, você é fora de série!" -->

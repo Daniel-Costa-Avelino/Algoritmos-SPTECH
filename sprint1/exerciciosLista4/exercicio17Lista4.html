@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 17 lista 4</title>
+</head>
+
+<body>
+
+    <h1>Frequência do aluno</h1>
+
+    Insira a sua frequência:
+    <input type="text" id="input_freq">
+    <br><br>
+
+    <button onclick="verificarFreq()">Analisar frequência</button><br><br>
+    <div id="div_mensagem"></div>
+
+</body>
+
+</html>
+
+<script>
+    function verificarFreq() {
+        var frequencia = Number(input_freq.value);
+
+        if (frequencia < 50) {
+            div_mensagem.innerHTML = `<img src = "https://img.freepik.com/fotos-gratis/retrato-de-homem-legal-em-camiseta-branca-olhando-para-a-distancia-e-sorrindo-cara-morena-em-oculos-de-sol-sorri-e-segura-passaporte-perto-do-aeroporto_197531-27051.jpg?ga=GA1.1.551231586.1739060203&semt=ais_hybrid">`
+        } else {
+            div_mensagem.innerHTML = `<img src = "https://img.freepik.com/fotos-gratis/jovem-escrevendo-em-um-caderno-durante-a-sessao-de-estudo_23-2149285403.jpg?ga=GA1.1.551231586.1739060203&semt=ais_hybrid">`
+        }
+    }
+</script>
+
+<!-- 
+17. Crie um programa o qual:
+
+a) Solicita a frequência do aluno
+
+b) Ao clicar em "Analisar frequência", deve aparecer, abaixo dele:
+
+A imagem de um turista, caso a frequência for menor que 50 OU
+
+A imagem de um aluno estudioso, caso a frequência for a partir de 50 -->

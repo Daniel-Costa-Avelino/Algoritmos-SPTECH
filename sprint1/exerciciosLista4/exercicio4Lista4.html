@@ -28,16 +28,29 @@
     function valorPorAmigo() {
         var valorPizza = Number(input_precoPizza.value);
         var qtdAmigos = Number(input_qtdAmigos.value);
-        var valorPorAmigo = (valorPizza/ qtdAmigos);
+        var valorPorAmigo = (valorPizza / qtdAmigos);
 
-        if (valorPorAmigo < 20) {
+        if (valorPorAmigo <= 20) {
             div_mensagemPizza.innerHTML =
-            `Cada amigo vai pagar R$${valorPorAmigo} pela pizza`;
+                `Cada amigo vai pagar R$${valorPorAmigo} pela pizza`;
         }
 
-        if (valorPorAmigo >= 20) {
+        if (valorPorAmigo > 20) {
             div_mensagemPizza.innerHTML =
-            `Deu ruim! Pizza muito cara!`;
+                `Deu ruim! Pizza muito cara!`;
         }
     }
 </script>
+
+<!-- 
+4. Um grupo de amigos costuma se reunir na casa de um deles para comer pizza. Só que eles têm um trato de que o valor da
+pizza, quando dividido entre os amigos, não deve passar de 20,00 por amigo. Ajude-os criando um programa o qual:
+
+a) Pergunte o valor da pizza
+
+b) Pergunte a quantidade de amigos reunidos
+
+c) Ao clicar em "Rola a pizza?", calcule e exiba o valor que cada amigo vai pagar na pizza com uma frase na página como
+esta "Cada amigo vai pagar R$X pela pizza"
+
+d) Somente caso o valor por amigo passe de R$20,00, exiba também a frase "Deu ruim! Pizza muito cara!" -->
