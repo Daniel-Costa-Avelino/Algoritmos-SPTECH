@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13 lista 5</title>
+</head>
+
+<body>
+
+    <h1>Pokémon inicial</h1>
+
+    Insira qual pokémon inicial você escolheria(Bulbasaur, Charmander, Squirtle):
+    <input type="text" id="input_pokemon">
+    <br><br>
+
+    <button onclick="escolherPokemon()">Escolher pokémon</button>
+    <div id="div_mensagem"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function escolherPokemon() {
+        var pokemon = input_pokemon.value;
+
+        if (pokemon == "Bulbasaur") {
+            div_mensagem.innerHTML = `<img src = "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/001.png" >`
+        } else if (pokemon == "Charmander") {
+            div_mensagem.innerHTML = `<img src = "https://img.pokemondb.net/artwork/large/charmander.jpg" >`
+        } else if (pokemon == "Squirtle") {
+            div_mensagem.innerHTML = `<img src = "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/007.png" >`
+        } else {
+            div_mensagem.innerHTML = "Pokémon não reconhecido";
+        }
+    }
+
+</script>
+
+<!-- 
+Crie um programa que ajude o usuário a escolher um Pokémon inicial e exiba a imagem correspondente.
+
+a) Pergunte ao usuário qual Pokémon inicial ele escolheria entre Bulbasaur, Charmander ou Squirtle.
+b) Ao clicar no botão "Escolher Pokémon", exiba a imagem do Pokémon escolhido abaixo do botão:
+
+Bulbasaur → Exibir imagem do Bulbasaur
+Charmander → Exibir imagem do Charmander
+Squirtle → Exibir imagem do Squirtle
+Se o usuário inserir um nome inválido, exibir uma mensagem "Pokémon não reconhecido." -->

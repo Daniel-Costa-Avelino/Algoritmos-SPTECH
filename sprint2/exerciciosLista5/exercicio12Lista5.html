@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12 lista 5</title>
+</head>
+
+<body>
+
+    <h1>Seu humor</h1>
+
+    Insira como está se sentindo hoje(Feliz, Triste, Bravo, Surpreso, Cansado):
+    <input type="text" id="input_humor">
+    <br><br>
+    <button onclick="mostrarHumor()">Mostrar humor</button>
+    <div id="div_mensagem"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function mostrarHumor() {
+        var humor = input_humor.value;
+
+        if (humor == "Feliz") {
+            div_mensagem.innerHTML = "😊";
+        } else if (humor == "Triste") {
+            div_mensagem.innerHTML = "😢";
+        } else if (humor == "Bravo") {
+            div_mensagem.innerHTML = "😡";
+        } else if (humor == "Surpreso") {
+            div_mensagem.innerHTML = "😲";
+        } else if (humor == "Cansado") {
+            div_mensagem.innerHTML = "😴";
+        }
+
+    }
+
+</script>
+
+<!-- 
+Crie um programa que ajude a exibir uma imagem representando o humor do usuário, conforme a escolha feita.
+
+a) Solicite ao usuário que selecione como ele está se sentindo hoje (Opções: "Feliz", "Triste", "Bravo", "Surpreso",
+"Cansado").
+b) Ao clicar no botão "Mostrar Humor", exiba uma imagem correspondente abaixo do botão:
+
+"Feliz" → Exibir imagem de um emoji sorridente 😊
+"Triste" → Exibir imagem de um emoji chorando 😢
+"Bravo" → Exibir imagem de um emoji irritado 😡
+"Surpreso" → Exibir imagem de um emoji surpreso 😲
+"Cansado" → Exibir imagem de um emoji sonolento 😴 -->

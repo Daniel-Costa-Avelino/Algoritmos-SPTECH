@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do aluno Filipe Santana</title>
+</head>
+
+<body>
+
+    <h1>Hall of fama NBA</h1>
+
+    Insira o nome do jogador:
+    <input type="text" id="input_nome">
+    <br><br>
+
+    Insira quantas temporadas jogou:
+    <input type="text" id="input_temporadas">
+    <br><br>
+
+    Insira quantas vezes foi selecionado pro all-star:
+    <input type="text" id="input_allStar">
+    <br><br>
+
+    Insira quantas vezes foi all-NBA:
+    <input type="text" id="input_allNba">
+    <br><br>
+
+    Insira quanto ganhou de salário no ano:
+    <input type="text" id="input_salarioAno">
+    <br><br>
+
+    <button onclick="verNivelJogador()">Nível do jogador</button>
+    <div id="div_mensagem"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function verNivelJogador() {
+        var nome = input_nome.value;
+        var temporadas = Number(input_temporadas.value);
+        var allStar = Number(input_allStar.value);
+        var allNba = Number(input_allNba.value);
+        var salarioAno = Number(input_salarioAno.value);
+        var salarioAoTodo = salarioAno * temporadas;
+
+        if (allStar >= 10) {
+            if (allNba >= 8) {
+                div_mensagem.innerHTML = `Parabéns ${nome}, você é um hall of Fame da NBA! Uau, você chegou a ganhar ${salarioAoTodo} milhões de dólares na NBA.`
+            }
+
+            if (allNba < 8) {
+                if (allStar >= 12) {
+                    div_mensagem.innerHTML = `Você está sendo avaliado para um possível lugar no hall of Fame da NBA... Mas uau, você chegou a ganhar ${salarioAoTodo} milhões de dólares na NBA.`
+                }
+            }
+        }
+
+        if (allStar <= 10) {
+            if (allNba < 8) {
+                div_mensagem.innerHTML = `Você foi um bom jogador ${nome}! E você chegou a ganhar ${salarioAoTodo} milhões de dólares na NBA.`
+            }
+        }
+    }
+
+</script>
+
+<!-- 
+Hall of fama da NBA é uma premiação da liga de basquete americana - NBA, que premia os jogadores mais bem sucedidos e já
+aposentados da liga, all-star game é um jogo de exibição que acontece durante a temporada da NBA, onde são selecionados
+os 24 melhores jogadores daquela temporada e o all-nba seleciona ao fim da temporada quem foram os 15 melhores jogadores
+daquela temporada.
+
+1. Faça um programa que mostre se um jogador é um Hall of Fame na NBA ou não e descubra quanto ele ganhou de salário no
+total em toda carreira.
+a) Pergunte qual o nome do jogador e pergunte a ele quantas temporadas ele jogou na NBA.
+b) Pergunte a ele quantas vezes ele foi selecionado pro all-star game e quantas vezes ele foi all-nba.
+c) Pergunte quanto ele ganhou de salário por ano.
+d) Ao clicar em "Nível do jogador", caso ele tenha sido 10x all-star e ao menos tenha sido 8x all-nba "Parabéns X, você
+é um hall of Fame da NBA! Uau, você chegou a ganhar Y milhões de dólares na NBA.", caso ele tenha sido selecionado menos
+que 8x para o all-nba, mas tenha sido selecionado mais que 12x para o all-star game mostre "Você está sendo avaliado
+para um possível lugar no hall of Fame da NBA... Mas uau, você chegou a ganhar Y milhões de dólares na NBA.", caso
+contrário as duas condições, mostre "Você foi um bom jogador X! E você chegou a ganhar Y milhões de dólares na NBA."
+
+OBS:
+Os jogadores da NBA tem contratos anuais e em maioria recebem milhões por ano, então ao fazer a busca pelo total de
+dólares que ele ganhou trate sempre com milhões de dólares. -->

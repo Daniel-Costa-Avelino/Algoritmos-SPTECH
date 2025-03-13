@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4 lista 5</title>
+</head>
+
+<body>
+
+    <h1>Avaliação de Peso Infantil: Está Dentro da Faixa Saudável?</h1>
+
+    Insira o peso da criança:
+    <input type="text" id="input_pesoCrianca">
+    <br><br>
+    <button onclick="classificar()">Classificar</button>
+    <div id="div_mensagem"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function classificar() {
+        var pesoCrianca = Number(input_pesoCrianca.value);
+
+        if (pesoCrianca < 13.5) {
+            div_mensagem.innerHTML = "Abaixo do peso";
+        } else if (pesoCrianca <= 21.2) {
+            div_mensagem.innerHTML = "Peso na média";
+            if (pesoCrianca == 18.3) {
+                div_mensagem.innerHTML = "Peso perfeito";
+            }
+        } else if (pesoCrianca > 21.2) {
+            div_mensagem.innerHTML = "Acima do peso";
+        }
+    }
+
+</script>
+
+<!-- 
+Uma nutróloga deseja um programa que ajude-a no processo de avaliação do peso de crianças de 5 anos.
+
+Seu programa, ao ler o peso da criança, deve exibir uma dessas frases:
+
+Abaixo do peso (se peso até 13.5kg)
+
+Acima do peso (se peso maior que 21.2kg)
+
+Peso na média (se peso maior que 13.5kg até 21.2kg)
+
+Peso perfeito (se o peso for exatamente 18.3kg) -->
